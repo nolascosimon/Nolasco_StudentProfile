@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap:; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Student Profile</title>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header">
+        <img class="avatar" src="img/profile.svg" alt="Profile picture of Simon Nolasco">
+        <h1 class="name">Simon Nolasco</h1>
+        <p class="subtitle">About Myself</p>
+
+        <!-- ============ NAVIGATION MENU ============ -->
+        <nav class="nav">
+            <button class="nav-btn is-active" data-target="about">About</button>
+            <button class="nav-btn" data-target="skills">Skills</button>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- ============ ABOUT SECTION ============ -->
+        <section id="about" class="section is-visible">
+            <h2 class="section-title">About Me</h2>
+
+            <p>
+                Hello! I am Simon Nolasco, an Information Technology student with a
+                growing interest in building software that people actually use. I enjoy
+                the part of development where an idea stops being a sketch on paper and
+                starts responding to a tap on a screen.
+            </p>
+            <p>
+                Most of my experience so far comes from coursework and personal projects:
+                small web applications, a desktop expense tracker, and now mobile
+                development with Apache Cordova. I like understanding how the pieces fit
+                together, from the interface down to the data underneath it.
+            </p>
+
+            <h3 class="sub-title">Interests</h3>
+            <ul class="list">
+                <li>Mobile and web application development</li>
+                <li>User interface and user experience design</li>
+                <li>Computer networking</li>
+                <li>Learning new frameworks and tools</li>
+            </ul>
+
+            <h3 class="sub-title">Educational Background</h3>
+            <ul class="list">
+                <li>Bachelor of Science in Information Technology (ongoing)</li>
+                <li>ITCC 41 &ndash; Mobile Application Development</li>
+                <li>Coursework in databases, networking, and object-oriented programming</li>
+            </ul>
+
+            <h3 class="sub-title">Goals and Aspirations</h3>
+            <ul class="list">
+                <li>Become a well-rounded full-stack developer</li>
+                <li>Build and publish a mobile application of my own</li>
+                <li>Contribute to open-source projects</li>
+                <li>Keep improving through real, hands-on practice</li>
+            </ul>
+        </section>
+
+        <!-- ============ SKILLS SECTION ============ -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+
+            <p>
+                These are the skills I have built up through class projects and personal
+                practice. I am strongest on the web side, but I enjoy working across the
+                whole stack and I pick up new tools quickly when a project needs them.
+            </p>
+
+            <ul class="skills">
+                <li class="skill">
+                    <span class="skill-name">HTML &amp; CSS</span>
+                    <span class="skill-note">Structuring and styling responsive layouts by hand.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-note">DOM manipulation, events, and adding interactivity to pages.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">PHP &amp; MySQL</span>
+                    <span class="skill-note">Building CRUD web applications backed by a relational database.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-note">Scripting and small desktop tools such as an expense tracker.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-note">Object-oriented programming and desktop apps using the MVC pattern.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Networking</span>
+                    <span class="skill-note">Switch and router configuration practiced in Cisco Packet Tracer.</span>
+                </li>
+                <li class="skill">
+                    <span class="skill-name">Git &amp; GitHub</span>
+                    <span class="skill-note">Version control, branching, and publishing project repositories.</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <p>&copy; <span id="year">2026</span> Simon Nolasco. All rights reserved.</p>
+    </footer>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

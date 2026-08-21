@@ -1,0 +1,208 @@
+/* ============================================================
+   Basic Student Profile - ITCC 41 Activity 2
+   ============================================================ */
+
+/* ---------- Theme colours ---------- */
+:root {
+    --bg:            #191046;
+    --bg-soft:       #241a5c;
+    --card:          #2c2070;
+    --accent:        #7c6cf0;
+    --accent-soft:   #a99bff;
+    --text:          #f2f0ff;
+    --text-dim:      #b9b2e6;
+    --border:        #3b2f8a;
+}
+
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    /* keep content clear of the phone notch and gesture bar */
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+
+/* ============ HEADER ============ */
+.header {
+    background: linear-gradient(160deg, var(--bg-soft), var(--bg));
+    padding: 32px 20px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    background: var(--card);
+}
+
+.name {
+    margin-top: 14px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.subtitle {
+    color: var(--accent-soft);
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* ============ NAVIGATION MENU ============ */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.nav-btn {
+    flex: 1 1 0;
+    max-width: 160px;
+    padding: 12px 0;
+    font: inherit;
+    font-weight: 600;
+    color: var(--text-dim);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* the interaction: the tapped tab is highlighted */
+.nav-btn.is-active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+.nav-btn:active {
+    color: var(--accent-soft);
+}
+
+/* ============ SECTIONS ============ */
+.main {
+    padding: 22px 20px 30px;
+}
+
+/* hidden by default; JavaScript adds .is-visible to the chosen one */
+.section {
+    display: none;
+}
+
+.section.is-visible {
+    display: block;
+    animation: fade-in 0.25s ease;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.section-title {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+}
+
+.section p {
+    color: var(--text-dim);
+    margin-bottom: 14px;
+}
+
+.sub-title {
+    font-size: 1.05rem;
+    margin: 20px 0 8px;
+    color: var(--accent-soft);
+}
+
+.list {
+    list-style: none;
+}
+
+.list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    color: var(--text-dim);
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+/* ============ SKILLS ============ */
+.skills {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: transform 0.15s ease, border-left-color 0.15s ease;
+}
+
+.skill:active {
+    transform: scale(0.98);
+    border-left-color: var(--accent-soft);
+}
+
+.skill-name {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.skill-note {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    text-align: center;
+    padding: 18px 20px 26px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* ---------- wider screens / tablets ---------- */
+@media (min-width: 600px) {
+    .main, .header { max-width: 640px; margin: 0 auto; }
+    .skills { grid-template-columns: 1fr 1fr; }
+}
