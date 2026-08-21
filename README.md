@@ -32,7 +32,7 @@ www/
   index.html      structure of the profile
   css/index.css   all styling (colours, layout, animation)
   js/index.js     the navigation interaction and footer year
-  img/profile.svg placeholder profile picture
+  img/profile.jpg profile picture
 ```
 
 ## Setup
