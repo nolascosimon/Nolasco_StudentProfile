@@ -1,52 +1,29 @@
 # Nolasco_StudentProfile
 
-ITCC 41 - Mobile Application Development, Activity 2.
-A **Basic Student Profile** built with HTML, CSS and JavaScript, then bundled
-and compiled with Apache Cordova and run on an Android emulator.
+ITCC 41 - Mobile Application Development
+Activity 2: Basic Student Profile
 
-## Contents
+A student profile app made with HTML, CSS and JavaScript, then compiled with
+Apache Cordova and run on an Android emulator.
 
-The profile is a single screen made up of four parts:
+## Sections
 
-- **Header** - profile picture, complete name, an "About Myself" subtitle, and the navigation menu
-- **Navigation menu** - About and Skills
-- **About section** - two paragraphs, plus interests, educational background, and goals
-- **Skills section** - a short description and seven skills
-- **Footer** - copyright notice, name, and the current year
+- Header - profile picture, name, "About Myself" subtitle, navigation menu
+- Navigation menu - About and Skills
+- About - two paragraphs, interests, educational background, goals
+- Skills - six skills with short descriptions
+- Footer - copyright, name, current year
 
-## The interaction
+## Interaction
 
-Tapping **About** or **Skills** in the navigation menu switches between the two
-sections without reloading the page. The tapped button stays highlighted and the
-incoming section fades in.
+Tapping About or Skills switches between the two sections without reloading the
+page. The selected button stays underlined. This is done in JavaScript by
+hiding one section and showing the other, and by changing the class of the
+buttons.
 
-This is done with plain JavaScript using events and the DOM: a `click` listener
-on each button reads its `data-target`, then adds or removes the `is-visible`
-class on the matching section. The footer year is also filled in automatically
-with `new Date().getFullYear()`.
-
-## Project structure
+## How to run
 
 ```
-www/
-  index.html      structure of the profile
-  css/index.css   all styling (colours, layout, animation)
-  js/index.js     the navigation interaction and footer year
-  img/profile.jpg profile picture
-```
-
-## Setup
-
-- Node.js v24.7.0
-- Cordova CLI 13.0.0
-- cordova-android 13.0.0
-- Android Studio (JDK 17, Android SDK API 34, Build-Tools 34.0.0)
-- Gradle 8.7
-
-## Commands used
-
-```
-cordova create Nolasco_StudentProfile com.example.nolascostudentprofile Nolasco_StudentProfile
 cordova platform add android@13
 cordova build android
 cordova run android --emulator
@@ -54,11 +31,8 @@ cordova run android --emulator
 
 ## Screenshots
 
-### About section
-![About section](screenshots/about.png)
+### About
+![About](screenshots/about.png)
 
-### Skills section
-![Skills section](screenshots/skills.png)
-
-### Build successful
-![Build successful](screenshots/build.png)
+### Skills
+![Skills](screenshots/skills.png)

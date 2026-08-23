@@ -3,109 +3,101 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
     <title>Student Profile</title>
 </head>
 <body>
-    <header class="header">
-        <img class="avatar" src="img/profile.jpg" alt="Profile picture of Simon Nolasco">
-        <h1 class="name">Simon Nolasco</h1>
+    <div class="header">
+        <img class="photo" src="img/profile.jpg" alt="Profile picture">
+        <h1>Simon Nolasco</h1>
         <p class="subtitle">About Myself</p>
 
-        <nav class="nav">
-            <button class="nav-btn is-active" data-target="about">About</button>
-            <button class="nav-btn" data-target="skills">Skills</button>
-        </nav>
-    </header>
+        <div class="menu">
+            <button id="aboutBtn" class="menu-button active">About</button>
+            <button id="skillsBtn" class="menu-button">Skills</button>
+        </div>
+    </div>
 
-    <main class="main">
-        <section id="about" class="section is-visible">
-            <h2 class="section-title">About Me</h2>
+    <div id="about" class="section">
+        <h2>About Me</h2>
 
-            <p>
-                Hello! I am Simon Nolasco, an Information Technology student with a
-                growing interest in building software that people actually use. I enjoy
-                the part of development where an idea stops being a sketch on paper and
-                starts responding to a tap on a screen.
-            </p>
-            <p>
-                Most of my experience so far comes from coursework and personal projects:
-                small web applications, a desktop expense tracker, and now mobile
-                development with Apache Cordova. I like understanding how the pieces fit
-                together, from the interface down to the data underneath it.
-            </p>
+        <p>
+            Hello! I am Simon Nolasco, an Information Technology student with a
+            growing interest in building software that people actually use. I enjoy
+            the part of development where an idea stops being a sketch on paper and
+            starts responding to a tap on a screen.
+        </p>
+        <p>
+            Most of my experience so far comes from coursework and personal projects:
+            small web applications, a desktop expense tracker, and now mobile
+            development with Apache Cordova. I like understanding how the pieces fit
+            together, from the interface down to the data underneath it.
+        </p>
 
-            <h3 class="sub-title">Interests</h3>
-            <ul class="list">
-                <li>Mobile and web application development</li>
-                <li>User interface and user experience design</li>
-                <li>Computer networking</li>
-                <li>Travelling and photography</li>
-            </ul>
+        <h3>Interests</h3>
+        <ul>
+            <li>Mobile and web application development</li>
+            <li>User interface and user experience design</li>
+            <li>Computer networking</li>
+            <li>Travelling and photography</li>
+        </ul>
 
-            <h3 class="sub-title">Educational Background</h3>
-            <ul class="list">
-                <li>Bachelor of Science in Information Technology (ongoing)</li>
-                <li>ITCC 41 &ndash; Mobile Application Development</li>
-                <li>Coursework in databases, networking, and object-oriented programming</li>
-            </ul>
+        <h3>Educational Background</h3>
+        <ul>
+            <li>Bachelor of Science in Information Technology (ongoing)</li>
+            <li>ITCC 41 - Mobile Application Development</li>
+            <li>Coursework in databases, networking, and object-oriented programming</li>
+        </ul>
 
-            <h3 class="sub-title">Goals and Aspirations</h3>
-            <ul class="list">
-                <li>Become a well-rounded full-stack developer</li>
-                <li>Build and publish a mobile application of my own</li>
-                <li>Contribute to open-source projects</li>
-                <li>Keep improving through real, hands-on practice</li>
-            </ul>
-        </section>
+        <h3>Goals and Aspirations</h3>
+        <ul>
+            <li>Become a well-rounded full-stack developer</li>
+            <li>Build and publish a mobile application of my own</li>
+            <li>Contribute to open-source projects</li>
+            <li>Keep improving through real, hands-on practice</li>
+        </ul>
+    </div>
 
-        <section id="skills" class="section">
-            <h2 class="section-title">Skills</h2>
+    <div id="skills" class="section">
+        <h2>Skills</h2>
 
-            <p>
-                These are the skills I have built up through class projects and personal
-                practice. I am strongest on the web side, but I enjoy working across the
-                whole stack and I pick up new tools quickly when a project needs them.
-            </p>
+        <p>
+            These are the skills I have built up through class projects and personal
+            practice. I am strongest on the web side, but I enjoy working across the
+            whole stack and I pick up new tools quickly when a project needs them.
+        </p>
 
-            <ul class="skills">
-                <li class="skill">
-                    <span class="skill-name">HTML &amp; CSS</span>
-                    <span class="skill-note">Structuring and styling responsive layouts by hand.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-note">DOM manipulation, events, and adding interactivity to pages.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">PHP &amp; MySQL</span>
-                    <span class="skill-note">Building CRUD web applications backed by a relational database.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">Python</span>
-                    <span class="skill-note">Scripting and small desktop tools such as an expense tracker.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">Java</span>
-                    <span class="skill-note">Object-oriented programming and desktop apps using the MVC pattern.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">Networking</span>
-                    <span class="skill-note">Switch and router configuration practiced in Cisco Packet Tracer.</span>
-                </li>
-                <li class="skill">
-                    <span class="skill-name">Git &amp; GitHub</span>
-                    <span class="skill-note">Version control, branching, and publishing project repositories.</span>
-                </li>
-            </ul>
-        </section>
-    </main>
+        <div class="skill">
+            <h4>HTML &amp; CSS</h4>
+            <p>Structuring and styling responsive layouts by hand.</p>
+        </div>
+        <div class="skill">
+            <h4>JavaScript</h4>
+            <p>DOM manipulation, events, and adding interactivity to pages.</p>
+        </div>
+        <div class="skill">
+            <h4>PHP &amp; MySQL</h4>
+            <p>Building CRUD web applications backed by a relational database.</p>
+        </div>
+        <div class="skill">
+            <h4>Python</h4>
+            <p>Scripting and small desktop tools such as an expense tracker.</p>
+        </div>
+        <div class="skill">
+            <h4>Java</h4>
+            <p>Object-oriented programming and desktop apps using the MVC pattern.</p>
+        </div>
+        <div class="skill">
+            <h4>Networking</h4>
+            <p>Switch and router configuration practiced in Cisco Packet Tracer.</p>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; <span id="year">2026</span> Simon Nolasco. All rights reserved.</p>
-    </footer>
+    </div>
+
+    <div class="footer">
+        <p>&copy; <span id="year"></span> Simon Nolasco. All rights reserved.</p>
+    </div>
 
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>

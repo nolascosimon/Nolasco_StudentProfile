@@ -1,27 +1,19 @@
-document.addEventListener("deviceready", setup);
-document.addEventListener("DOMContentLoaded", setup);
+document.getElementById("aboutBtn").onclick = function () {
+    showSection("about");
+};
 
-let ready = false;
+document.getElementById("skillsBtn").onclick = function () {
+    showSection("skills");
+};
 
-function setup() {
-    if (ready) return;
-    ready = true;
+function showSection(name) {
+    document.getElementById("about").style.display = "none";
+    document.getElementById("skills").style.display = "none";
+    document.getElementById(name).style.display = "block";
 
-    document.querySelectorAll(".nav-btn").forEach(function (button) {
-        button.addEventListener("click", function () {
-            showSection(button.dataset.target);
-        });
-    });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("aboutBtn").className = "menu-button";
+    document.getElementById("skillsBtn").className = "menu-button";
+    document.getElementById(name + "Btn").className = "menu-button active";
 }
 
-function showSection(id) {
-    document.querySelectorAll(".section").forEach(function (section) {
-        section.classList.toggle("is-visible", section.id === id);
-    });
-
-    document.querySelectorAll(".nav-btn").forEach(function (button) {
-        button.classList.toggle("is-active", button.dataset.target === id);
-    });
-}
+document.getElementById("year").textContent = new Date().getFullYear();
