@@ -11,7 +11,7 @@ Apache Cordova and run on an Android emulator.
 - Header - profile picture, name, "About Myself" subtitle, navigation menu
 - Navigation menu - About and Skills
 - About - two paragraphs, interests, educational background, goals
-- Skills - six skills with short descriptions
+- Skills - five skills with short descriptions
 - Footer - copyright, name, current year
 
 ## Interaction
