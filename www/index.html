@@ -8,91 +8,95 @@
     <title>Student Profile</title>
 </head>
 <body>
-    <div class="header">
-        <img class="photo" src="img/profile.jpg" alt="Profile picture">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="header">
+        <img class="photo" src="img/profile.jpg" alt="Portrait photo of Simon Lucas Mari B. Nolasco">
         <h1>Simon Lucas Mari B. Nolasco</h1>
         <p class="subtitle">About Myself</p>
 
-        <div class="menu">
-            <button id="aboutBtn" class="menu-button active">About</button>
-            <button id="skillsBtn" class="menu-button">Skills</button>
-        </div>
-    </div>
+        <nav class="menu" aria-label="Section navigation">
+            <a class="menu-link" href="#about">About</a>
+            <a class="menu-link" href="#skills">Skills</a>
+        </nav>
+    </header>
 
-    <div id="about" class="section">
-        <h2>About Me</h2>
+    <main id="main-content">
+        <section id="about" class="section" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
 
-        <p>
-            I am Simon Nolasco, a 3rd year Information Technology student with an
-            interest in building software that people actually use. I find it motivating when an 
-            idea or work of mine becomes something that works with a tap on the screen.
-        </p>
-        <p>
-            Most of my experience so far comes from courseworks:
-            small web applications, a desktop expense tracker, and now mobile
-            development with Apache Cordova. I like understanding how things fit
-            together, from the interface down to how the data is stored.
-        </p>
+            <p>
+                I am Simon Nolasco, a 3rd year Information Technology student with an
+                interest in building software that people actually use. I find it motivating when an
+                idea or work of mine becomes something that works with a tap on the screen.
+            </p>
+            <p>
+                Most of my experience so far comes from courseworks: small web applications,
+                a desktop expense tracker, and now mobile development with Apache Cordova.
+                I like understanding how things fit together, from the interface down to how
+                the data is stored.
+            </p>
 
-        <h3>Interests</h3>
-        <ul>
-            <li>Mobile and web application development</li>
-            <li>User interface and user experience design</li>
-            <li>Travelling and photography</li>
-        </ul>
+            <h3>Interests</h3>
+            <ul>
+                <li>Mobile and web application development</li>
+                <li>User interface and user experience design</li>
+                <li>Travelling and photography</li>
+            </ul>
 
-        <h3>Educational Background</h3>
-        <ul>
-            <li>Bachelor of Science in Information Technology (ongoing)</li>
-            <li>ITCC 41 - Mobile Application Development</li>
-            <li>Coursework in databases, networking, and object-oriented programming</li>
-        </ul>
+            <h3>Educational Background</h3>
+            <ul>
+                <li>Bachelor of Science in Information Technology (ongoing)</li>
+                <li>ITCC 41 - Mobile Application Development</li>
+                <li>Coursework in databases, networking, and object-oriented programming</li>
+            </ul>
 
-        <h3>Goals and Aspirations</h3>
-        <ul>
-            <li>Build and publish a mobile application of my own</li>
-            <li>Contribute to open-source projects</li>
-            <li>Keep improving through real, hands-on practice</li>
-        </ul>
-    </div>
+            <h3>Goals and Aspirations</h3>
+            <ul>
+                <li>Build and publish a mobile application of my own</li>
+                <li>Contribute to open-source projects</li>
+                <li>Keep improving through real, hands-on practice</li>
+            </ul>
+        </section>
 
-    <div id="skills" class="section">
-        <h2>Skills</h2>
+        <section id="skills" class="section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
 
-        <p>
-            Most of my skills came from the lessons and activities I have encountered
-            in my courses. I am still learning each of them, but I try to apply what is
-            taught in class to actual projects like this one.
-        </p>
+            <p>
+                Most of my skills came from the lessons and activities I have encountered
+                in my courses. I am still learning each of them, but I try to apply what is
+                taught in class to actual projects like this one.
+            </p>
 
-        <div class="skill">
-            <h4>HTML &amp; CSS</h4>
-            <p>Structuring and styling responsive layouts by hand.</p>
-        </div>
-        <div class="skill">
-            <h4>JavaScript</h4>
-            <p>DOM manipulation, events, and adding interactivity to pages.</p>
-        </div>
-        <div class="skill">
-            <h4>PHP &amp; MySQL</h4>
-            <p>Building CRUD web applications backed by a relational database.</p>
-        </div>
-        <div class="skill">
-            <h4>Python</h4>
-            <p>Scripting and small desktop tools such as an expense tracker.</p>
-        </div>
-        <div class="skill">
-            <h4>Java</h4>
-            <p>Object-oriented programming and desktop apps using the MVC pattern.</p>
-        </div>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h4>HTML &amp; CSS</h4>
+                    <p>Structuring and styling responsive layouts by hand.</p>
+                </div>
+                <div class="skill">
+                    <h4>JavaScript</h4>
+                    <p>DOM manipulation, events, and adding interactivity to pages.</p>
+                </div>
+                <div class="skill">
+                    <h4>PHP &amp; MySQL</h4>
+                    <p>Building CRUD web applications backed by a relational database.</p>
+                </div>
+                <div class="skill">
+                    <h4>Python</h4>
+                    <p>Scripting and small desktop tools such as an expense tracker.</p>
+                </div>
+                <div class="skill">
+                    <h4>Java</h4>
+                    <p>Object-oriented programming and desktop apps using the MVC pattern.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
-
-    <div class="footer">
-        <p>&copy; <span id="year"></span> Simon Nolasco. All rights reserved.</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Simon Nolasco. All rights reserved.</p>
+    </footer>
 
     <script src="cordova.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>
