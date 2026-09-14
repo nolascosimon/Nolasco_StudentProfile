@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Skills - Student Profile</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="header">
+        <img class="photo" src="img/profile.jpg" alt="Portrait photo of Simon Lucas Mari B. Nolasco">
+        <h1>Simon Lucas Mari B. Nolasco</h1>
+        <p class="subtitle">Aspiring Mobile &amp; Web Developer</p>
+
+        <nav class="menu" aria-label="Site navigation">
+            <a class="menu-link" href="index.html">Profile</a>
+            <a class="menu-link" href="about.html">About</a>
+            <a class="menu-link" href="skills.html" aria-current="page">Skills</a>
+            <a class="menu-link" href="projects.html">Projects</a>
+            <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="section" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+
+            <p>
+                Most of my skills came from the lessons and activities I have encountered
+                in my courses. I am still learning each of them, but I try to apply what is
+                taught in class to actual projects like this one.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill">
+                    <h4>HTML &amp; CSS</h4>
+                    <p>Structuring and styling responsive layouts by hand.</p>
+                </div>
+                <div class="skill">
+                    <h4>JavaScript</h4>
+                    <p>DOM manipulation, events, and adding interactivity to pages.</p>
+                </div>
+                <div class="skill">
+                    <h4>PHP &amp; MySQL</h4>
+                    <p>Building CRUD web applications backed by a relational database.</p>
+                </div>
+                <div class="skill">
+                    <h4>Python</h4>
+                    <p>Scripting and small desktop tools such as an expense tracker.</p>
+                </div>
+                <div class="skill">
+                    <h4>Java</h4>
+                    <p>Object-oriented programming and desktop apps using the MVC pattern.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Simon Nolasco. All rights reserved.</p>
+    </footer>
+
+    <script src="cordova.js"></script>
+</body>
+</html>

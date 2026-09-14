@@ -1,64 +1,67 @@
 # Nolasco_StudentProfile
 
 ITCC 41 - Mobile Application Development
-Activity 3: Responsive Student Profile
+Activity 4: Multi-Page Student Profile
 
 ## 1. Project Description
 
-A student profile app made with HTML and CSS, compiled with Apache Cordova.
-It shows my photo, name, About section, and Skills section, and now works
-properly on Desktop, Tablet, and Mobile screens.
+A multi-page student profile app made with HTML and CSS, compiled with Apache
+Cordova. Expanded from Activity 3 into 5 separate pages, each with its own
+purpose, while keeping the same responsive design.
 
-## 2. Application Structure
+## 2. Application Pages
 
-- Header - profile picture, name, "About Myself" subtitle, navigation menu
-- Navigation Menu - About and Skills links
-- About Section - two paragraphs about myself, interests, educational
-  background, goals
-- Skills Section - five skills with short descriptions
-- Footer - copyright notice, name, current year
+- Profile - homepage, short introduction and tagline, links to the other pages
+- About - detailed personal introduction, interests, educational background, goals
+- Skills - five skills with short descriptions
+- Projects - three projects with title, description, role, and tools used
+- Contact - email, GitHub, and Facebook
 
-## 3. Responsive Design
+## 3. Navigation
 
-Built mobile-first: the base CSS is written for the smallest screen, then two
-media queries at 600px and 1024px adjust the layout for tablet and desktop.
-Headings use `clamp()` so text size scales with the screen instead of jumping
-at each breakpoint. The Skills section uses CSS Grid, going from 1 column on
-mobile, to 2 on tablet, to 3 on desktop.
+Every page has the same navigation menu with links to all 5 pages. The links
+are plain HTML anchor tags pointing to the actual page files, for example
+`href="about.html"`. No JavaScript is used for navigation. The current page is
+shown bolded and underlined in the menu using a CSS attribute selector, not
+JavaScript.
 
-## 4. UI/UX Principles Applied
+## 4. Responsive Design
 
-- **Responsive Layout** - layout adapts to Desktop, Tablet, and Mobile with
-  no horizontal scrolling.
-- **Mobile-Friendly Spacing** - consistent spacing used throughout.
-- **Appropriate Typography** - readable text sizes on every screen.
-- **Clear Visual Hierarchy** - name, headings, and subheadings are visually
-  distinct.
-- **Usable Controls** - nav links are easy to tap, with hover/focus states.
-- **Basic Accessibility** - skip link, alt text, labeled sections, visible
-  focus outlines.
-- **Consistent Design** - same colors and spacing used in every section.
+All 5 pages use the same stylesheet, so the same responsive behavior from
+Activity 3 applies everywhere. Mobile-first CSS with two media queries at
+600px and 1024px. The navigation stacks vertically on mobile and becomes a
+horizontal row on tablet and desktop. The Skills and Projects sections use CSS
+Grid, going from 1 column on mobile up to 2 or 3 columns on larger screens.
 
-## 5. Navigation
+## 5. UI/UX Principles Applied
 
-The About and Skills links are anchor links (`href="#about"`, `href="#skills"`)
-that scroll to their section on the same page. No JavaScript is used for
-navigation or for the responsive layout.
+- Consistency - same header, footer, navigation, colors, and spacing on every page
+- Visual Hierarchy - name, headings, and subheadings are visually distinct on every page
+- Usability - the current page is highlighted in the nav so users know where they are
+- Readability - readable text sizes on every screen size
+- Accessibility - skip link, alt text, labeled sections, visible focus outlines
 
 ## 6. How to Run
 
+```
 cordova platform add android@13
 cordova build android
 cordova run android --emulator
-
+```
 
 ## 7. Application Screenshots
 
-### Desktop
-![Desktop](screenshots/desktop.png)
+### Profile
+![Profile](screenshots/profile.png)
 
-### Tablet
-![Tablet](screenshots/tablet.png)
+### About
+![About](screenshots/about.png)
 
-### Mobile
-![Mobile](screenshots/mobile.png)
+### Skills
+![Skills](screenshots/skills.png)
+
+### Projects
+![Projects](screenshots/projects.png)
+
+### Contact
+![Contact](screenshots/contact.png)

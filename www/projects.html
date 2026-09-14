@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap:; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Projects - Student Profile</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="header">
+        <img class="photo" src="img/profile.jpg" alt="Portrait photo of Simon Lucas Mari B. Nolasco">
+        <h1>Simon Lucas Mari B. Nolasco</h1>
+        <p class="subtitle">Aspiring Mobile &amp; Web Developer</p>
+
+        <nav class="menu" aria-label="Site navigation">
+            <a class="menu-link" href="index.html">Profile</a>
+            <a class="menu-link" href="about.html">About</a>
+            <a class="menu-link" href="skills.html">Skills</a>
+            <a class="menu-link" href="projects.html" aria-current="page">Projects</a>
+            <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <p>
+                A few of the projects I have worked on during my coursework and on my own.
+            </p>
+
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Student Profile App</h3>
+                    <p>This site. A multi-page profile built with Apache Cordova, focused on
+                        responsive layout and clean HTML/CSS navigation.</p>
+                    <p class="meta">Role: Sole developer</p>
+                    <p class="meta">Tools: HTML, CSS, Apache Cordova</p>
+                </div>
+                <div class="project">
+                    <h3>Desktop Expense Tracker</h3>
+                    <p>A desktop app for logging daily expenses and viewing simple monthly
+                        totals.</p>
+                    <p class="meta">Role: Sole developer</p>
+                    <p class="meta">Tools: Python</p>
+                </div>
+                <div class="project">
+                    <h3>CRUD Web Application</h3>
+                    <p>A small web app for managing records in a relational database, built
+                        as part of coursework.</p>
+                    <p class="meta">Role: One of the 3 developers</p>
+                    <p class="meta">Tools: PHP, MySQL, HTML, CSS</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Simon Nolasco. All rights reserved.</p>
+    </footer>
+
+    <script src="cordova.js"></script>
+</body>
+</html>
