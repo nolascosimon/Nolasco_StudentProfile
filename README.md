@@ -50,7 +50,7 @@ edits are still there after closing and reopening the page.
 ## 6. Responsive Design
 
 All 5 pages use the same stylesheet, so the same responsive behavior from
-Activity 3 and 4 applies everywhere, including the Edit Profile form. Mobile-
+Activity 3 and 4 applies everywhere, including the Edit Profile form. Mobile
 first CSS with two media queries at 600px and 1024px. The navigation stacks
 vertically on mobile and becomes a horizontal row on tablet and desktop.
 
