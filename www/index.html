@@ -25,17 +25,13 @@
     </header>
 
     <main id="main-content">
-        <section class="section" aria-labelledby="profile-heading">
-            <h2 id="profile-heading">Welcome</h2>
+        <section class="section" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome</h2>
 
             <p>
                 Hi, I'm Simon - a 3rd year Information Technology student who enjoys turning
                 ideas into working software. This site is where I share more about who I am,
                 what I can do, what I've built, and how to reach me.
-            </p>
-            <p>
-                Use the navigation above, or the links below, to explore my About, Skills,
-                Projects, and Contact pages.
             </p>
 
             <div class="hero-links">
@@ -45,12 +41,55 @@
                 <a class="hero-link" href="contact.html">Contact Me</a>
             </div>
         </section>
+
+        <section class="section" aria-labelledby="profile-heading">
+            <h2 id="profile-heading">Student Profile</h2>
+
+            <div id="profileView" class="profile-card">
+                <p><strong>Full Name:</strong> <span id="viewFullName"></span></p>
+                <p><strong>Course:</strong> <span id="viewCourse"></span></p>
+                <p><strong>Year Level:</strong> <span id="viewYearLevel"></span></p>
+
+                <h3>About</h3>
+                <p id="viewAboutMe"></p>
+
+                <h3>Skills</h3>
+                <ul id="viewSkills"></ul>
+
+                <button type="button" id="editProfileBtn" class="btn-primary">Edit Profile</button>
+            </div>
+
+            <form id="editProfileForm" class="edit-form" hidden>
+                <p id="formError" class="form-error" hidden></p>
+
+                <label for="fullNameInput">Full Name</label>
+                <input type="text" id="fullNameInput" name="fullName">
+
+                <label for="courseInput">Course</label>
+                <input type="text" id="courseInput" name="course">
+
+                <label for="yearLevelInput">Year Level</label>
+                <input type="text" id="yearLevelInput" name="yearLevel">
+
+                <label for="aboutMeInput">About Me</label>
+                <textarea id="aboutMeInput" name="aboutMe" rows="4"></textarea>
+
+                <label for="skillsInput">Skills</label>
+                <textarea id="skillsInput" name="skills" rows="2"></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Save</button>
+                    <button type="button" id="cancelEditBtn" class="btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2026 Simon Nolasco. All rights reserved.</p>
     </footer>
 
+    <script src="js/profile.js"></script>
     <script src="cordova.js"></script>
 </body>
 </html>
