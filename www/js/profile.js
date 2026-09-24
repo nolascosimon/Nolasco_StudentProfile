@@ -1,4 +1,5 @@
 var STORAGE_KEY = "studentProfileData";
+var PHOTO_STORAGE_KEY = "studentProfilePhoto";
 
 var defaultProfile = {
     fullName: "Simon Lucas Mari B. Nolasco",
@@ -93,3 +94,46 @@ editForm.addEventListener("submit", function (event) {
     editForm.hidden = true;
     profileView.hidden = false;
 });
+
+var changePhotoBtn = document.getElementById("changePhotoBtn");
+var photoError = document.getElementById("photoError");
+var headerPhoto = document.querySelector(".header .photo");
+
+changePhotoBtn.addEventListener("click", function () {
+    photoError.hidden = true;
+
+    if (!navigator.camera) {
+        photoError.textContent = "Camera is unavailable.";
+        photoError.hidden = false;
+        return;
+    }
+
+    navigator.camera.getPicture(onCameraSuccess, onCameraFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        encodingType: Camera.EncodingType.JPEG,
+        correctOrientation: true,
+        targetWidth: 600,
+        targetHeight: 600
+    });
+});
+
+function onCameraSuccess(imageData) {
+    var imageSrc = imageData;
+    if (imageData.indexOf("data:") !== 0) {
+        imageSrc = "data:image/jpeg;base64," + imageData;
+    }
+    headerPhoto.src = imageSrc;
+    localStorage.setItem(PHOTO_STORAGE_KEY, imageSrc);
+    photoError.hidden = true;
+}
+
+function onCameraFail(message) {
+    var text = (message || "").toLowerCase();
+    if (text.indexOf("cancel") !== -1 || text.indexOf("no image selected") !== -1) {
+        return;
+    }
+    photoError.textContent = "Unable to access the camera. Please check your device permissions.";
+    photoError.hidden = false;
+}
