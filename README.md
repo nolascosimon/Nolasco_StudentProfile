@@ -77,7 +77,7 @@ cordova run android --emulator
 ## 10. Application Screenshots
 
 ### Student Profile
-![Student Profile](screenshots/student-profile.png)
+![Student Profile](screenshots/defaultprofile.png)
 
 ### Change Profile Picture
 ![Change Profile Picture](screenshots/changephoto.png)
@@ -89,4 +89,4 @@ cordova run android --emulator
 ![Captured Image](screenshots/capturedimage.png)
 
 ### Updated Profile Picture
-![Updated Profile Picture](screenshots/updated-profile.png)
+![Updated Profile Picture](screenshots/finalprofile.png)
